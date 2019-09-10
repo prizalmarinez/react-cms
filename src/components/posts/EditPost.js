@@ -4,7 +4,7 @@ class EditPost extends Component {
     render() {
         return (
             <div>
-
+                
             </div>
         );
     }
