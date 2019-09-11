@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const MenuHeader = () => {
     return (
-        <div className="ui menu">
+        <div className="ui top fixed menu">
             <div className="header item">
-                React CMS
+                <Link to="/"> React CMS</Link>
+            </div>
+            <div className="ui item">
+                <Link to="/posts/new"> Add Post</Link>
             </div>
             <div className="right menu">
                 <div className="item">

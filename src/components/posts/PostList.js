@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class PostList extends Component {
 
@@ -20,22 +21,20 @@ class PostList extends Component {
                             {post.body}
                         </div>
                     </div>
-                    <div className="ui bottom attached button">
+                    <Link className="ui bottom attached button" to={`/posts/edit/${post.id}`}>
                         <i className="pencil icon"></i>
                         Edit
-                    </div>
+                    </Link>
                     <button className="ui bottom attached button" onClick={this.props.delPost.bind(this, post.id)}>
                         <i className="trash icon"></i>
                         Delete
                     </button>
-                </div>
+                </div >
             )
         })
     }
 
     render() {
-        console.log(this.props.posts)
-
         return (
             <div>
                 <div className="ui cards">
